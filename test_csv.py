@@ -2,8 +2,7 @@
 from datetime import datetime, date
 
 date_in = input('Enter the date: ')
-date_format = datetime.strptime(date_in, '%m/%d/%Y')
-date_out = date_format.date()
+date_out= datetime.strptime(date_in, '%m/%d/%Y')
 gross_income = input('Enter gross income: $')
 gross_income = int(gross_income)
 tax = gross_income * 0.153
