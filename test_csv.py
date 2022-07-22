@@ -17,15 +17,18 @@ header = ['Date', 'Gross Income', 'Tax', 'Total Income']
 
 # set csv data
 data = [
-    [date_out, gross_income, tax, total_income]
+    {'Date': date_out, 
+    'Gross Income' : gross_income,
+    'Tax' : tax,
+    'Total Income' : total_income}
 ]
 
 # open csv
 with open('income.csv', 'w', encoding='UTF8', newline='') as f:
-    writer = csv.writer(f)
+    writer = csv.DictWriter(f, fieldnames=header)
 
     # write header to csv
-    writer.writerow(header)
+    writer.writeheader()
 
     # write data to csv
     writer.writerow(data)
