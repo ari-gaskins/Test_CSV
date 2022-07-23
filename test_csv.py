@@ -32,3 +32,6 @@ with open('income.csv', 'w', encoding='UTF8', newline='') as f:
 
     # write data to csv
     writer.writerows(data)
+
+    # close csv file
+    f.close()
