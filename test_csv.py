@@ -31,4 +31,4 @@ with open('income.csv', 'w', encoding='UTF8', newline='') as f:
     writer.writeheader()
 
     # write data to csv
-    writer.writerow(data)
+    writer.writerows(data)
